@@ -18,8 +18,8 @@ app.set("view-engine", "ejs");
 //implement nexmo
 const nexmo = new Nexmo(
   {
-    apiKey: "f710d6f9",
-    apiSecret: "UcDy1IwUK8I3lqvn"
+    apiKey: "<your apiKey>",
+    apiSecret: "<your api secret>"
   },
   { debug: true }
 );
@@ -33,7 +33,7 @@ app.post("/send", (req, res) => {
   const message = req.ybody.msg;
 
   nexmo.message.sendSms(
-    "9779824312452",
+    "<your special number provided>",
     phoneNumber,
     message,
     { type: "unicode" },
